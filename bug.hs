@@ -1,0 +1,1 @@
+This code suffers from a common Haskell pitfall: assuming non-strict evaluation will magically handle infinite data structures. The `repeat 1` generates an infinite list of ones.  The `take 5` attempts to take only the first five elements, but the entire infinite list is still constructed, eventually leading to a stack overflow.
